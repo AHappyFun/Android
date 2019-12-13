@@ -9,11 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ThirdActivity" android:label="third activity">
+        <provider
+            android:name=".MyProvider"
+            android:authorities="com.example.activitytest.provider"
+            android:enabled="true"
+            android:exported="true"></provider>
 
-        </activity>
-
-
+        <activity
+            android:name=".ThirdActivity"
+            android:label="third activity"></activity>
         <activity
             android:name=".SecondActivity"
             android:label="second activity">
@@ -24,7 +28,6 @@
                 <category android:name="com.example.activitytest.My_Category" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".FirstActivity"
             android:label="lalala first activity">
